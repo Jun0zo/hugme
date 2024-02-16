@@ -1,11 +1,441 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿즈 홍보 페이지</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'LOTTERIACHAB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        a, a:hover, a:visited, a:active{
+            color: black;
+            text-decoration: none;
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, span, p {
+            /* font-family: "Do Hyeon", sans-serif; */
+        }
+
+        
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h2 {
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 50px 10px !important; /* 기본 padding */
+        }
+
+        /* 화면 너비가 768px 이상일 때 */
+        @media (min-width: 768px) {
+            .section {
+                padding: 50px 20px !important; /* 768px 이상에서 적용될 padding */
+            }
+        }
+
+        /* 화면 너비가 1024px 이상일 때 */
+        @media (min-width: 1024px) {
+            .section {
+                padding: 50px 100px !important; /* 1024px 이상에서 적용될 padding */
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .section {
+                padding: 50px 200px !important; /* 1024px 이상에서 적용될 padding */
+            }
+        }
+
+
+        .content-section {
+            height: 500px;
+            background-color: #f8f9fa;
+        }
+
+        .section > div {
+            padding: 30px 50px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .text-center { padding-top: 80px; }
+
+        @keyframes floatUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .status-up {
+            animation: floatUp 0.5s ease-out forwards;
+            text-align: center;
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 2px;
+            right: 0;
+            background: #000;
+            transition: width 0.4s ease, right 0.4s ease;
+        }
+
+        .hover-underline-animation:hover::after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="">
+    <div class="ui grid">
+        <div class="sixteen wide column section" style="background-color: #252525; color: white; height: 500px">
+            <div class="contents">
+                <!-- <img src="/images/head_char.svg" width="80px" height="80px"/> -->
+                <img src="/images/title.svg" width="300px" height="300px"/>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <div class="sixteen wide column section row grid" style="background-color: white;">
+            <div class="eight wide tablet eight wide computer column contents" style="text-align: left;">
+                <h1>What is 허그미?</h1>
+                <p style="margin-top: 30px; line-height: 35px;">'
+                    허그미'는 학대받은 동물들에게 새로운 삶을 제공하기 위해 시작된 이니셔티브입니다. 
+                    우리의 미션은 학대로부터 동물들을 구조하고, 그들에게 필요한 치료와 사랑을 제공하여, 
+                    가능한 한 많은 동물들이 안전하고 건강한 환경에서 살 수 있도록 하는 것입니다.
+                     '허그미'는 동물 복지에 대한 사회적 인식을 높이고, 
+                     지역 커뮤니티와 협력하여 동물 보호 정책을 개선하는 데 앞장서고 있습니다. 
+                     우리는 동물을 사랑하는 사람들의 지원을 통해 성장하고 있으며, 
+                     모든 생명이 존중받는 더 나은 세상을 만들기 위해 노력하고 있습니다.</p>
+                <ul style="display:flex; flex-direction: row; gap:90px; margin-top: 20px">
+                    <li>
+                        <div>
+                            <h2 id="count1">6</h2>
+                            <span>허그미 친구들 종류</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2 id="count2">1,281</h2>
+                            <span>허그미 후원자들</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2 id="count3">5,129</h2>
+                            <span>구조된 허그미 친구들</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="eight wide tablet eight wide computer column" style="display:flex; justify-content: center; align-items: center;">
+                <img src="/images/rabit_carrot.svg" style="width: 300px; height: 300px"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <div class="sixteen wide column section row" style="background-color: #efad22; text-align: right;">
+            <div class="eight wide column" style="display:flex; justify-content: center; align-items: center;">
+                <img src="/images/mouse_cheeze.svg" style=" height: 350px"/>
+            </div>
+            <div class="contents eight wide column" style="text-align: right; max-width:700px">
+                <h1>귀여움으로 이 세상을 지배하겠다!</h1>
+                <p style="text-align: left; margin-top: 50px">
+                    우리의 작은 친구들이 큰 사명을 안고 여러분 앞에 섰습니다. '허그미' 프로젝트의 심장부에서 탄생한 
+                    이 귀여운 캐릭터들은 단순한 굿즈가 아닙니다. 
+                    학대받은 동물들의 슬픈 이야기와 그들이 겪은 아픔 뒤에 숨겨진 희망의 메시지를 전달하는 사자입니다.
+                </p>
+                <p style="text-align: left;">
+                    각 캐릭터는 실제 구조된 동물들의 이야기에서 영감을 받아 탄생했습니다. 이들의 목표는 단 하나, 귀여움의 힘으로 세상의 무관심을 깨우고, 학대받는 동물들에 대한 인식을 개선하는 것입니다. 
+                    '허그미' 굿즈를 소개할 때마다, 우리는 이들 동물이 겪은 고통과 그들에게 필요한 사랑과 보호에 대한 중요한 대화를 시작합니다.
+                </p>
+                <p style="text-align: left;">
+                    허그미 굿즈 컬렉션에는 다양한 아이템이 준비되어 있습니다: 인형, 키체인, 머그컵, 티셔츠 등. 각 제품은 고품질의 소재로 만들어져, 오래도록 여러분과 함께할 것입니다. 뿐만 아니라, 
+                    구매하신 모든 굿즈의 수익금은 학대받은 동물들을 구조하고 치료하는 데 직접적으로 기여됩니다.
+                </p>
+                <p style="text-align: left;">
+                    '허그미' 굿즈를 통해 여러분은 단순히 귀여운 아이템을 소유하는 것 이상의 가치를 얻게 됩니다. 여러분은 세상을 바꾸는 데 일조하는, 매우 의미 있는 행동을 하는 것입니다. 
+                    이 작은 변화가 모여 큰 파도를 만들고, 결국에는 모든 생명체가 안전하고 행복하게 살 수 있는 세상을 만들 수 있습니다.
+                </p>
+                <p style="text-align: left;">
+                    지금 바로 '허그미' 굿즈를 만나보세요. 여러분의 작은 관심과 사랑이, 
+                    귀여움으로 세상을 지배하는 큰 힘이 될 수 있습니다. 우리와 함께 이 중요한 여정에 동참해 주세요.
+                </p>
+                
+                <div style=" margin-top:30px;">
+                    <div class="ui animated primary button" tabindex="0">
+                        <div class="visible content">굿즈 구경하기</div>
+                        <div class="hidden content">
+                          <i class="right arrow icon"></i>
+                        </div>
+                      </div>
+                      <div class="ui vertical animated secondary button" tabindex="0">
+                        <div class="hidden content">공유하기</div>
+                        <div class="visible content">
+                          <i class="share icon"></i>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <div class="sixteen wide column section" style="background-color: #efad22;">
+            <div style="">
+                <h1>귀여움 속에 숨겨진 아픔: 학대받은 동물들의 이야기</h1>
+                <div style="display: flex; flex-direction: row; gap: 80px; margin-top:50px">
+                    <p style="text-align: left;">
+                        학대받은 동물들에 대한 인식 개선과 사회적 관심을 촉진하기 위해, 
+                        우리는 강력하면서도 마음을 움직이는 방법을 고민하게 되었습니다. 
+                        이 과정에서 우리가 도달한 결론은 사람들의 마음을 열고, 
+                        메시지에 귀 기울이게 만들 수 있는 '귀여운 캐릭터'의 힘을 활용하는 것이었습니다.
+                         이 캐릭터들은 단순한 상상의 산물이 아니라, 학대와 방치로 고통받는 동물들의 이야기를 대변하고, 
+                         그들이 겪는 현실을 보다 넓은 대중에게 전달하는 강력한 수단입니다. 이러한 캐릭터들을 통해, 
+                         우리는 학대받은 동물들이 단지 통계의 숫자나 멀게만 느껴지는 존재가 아니라, 
+                         각자의 이름과 이야기를 가진 생명체임을 강조하고자 합니다.
+                    </p>
+                    <p style="text-align: left;">
+                        '허그미' 캐릭터들은 학대와 방치로부터 구조된 실제 동물들의 이야기에서 영감을 받아 탄생했습니다. 
+                        이들은 용기, 회복, 희망의 상징으로, 어려움을 극복하고 새로운 삶을 찾아가는 모든 동물들의 대변인 역할을 합니다.
+                         우리는 이 캐릭터들을 통해 동물 학대에 대한 인식을 개선하고, 
+                         사람들이 동물 복지의 중요성을 이해하며, 동물을 대하는 태도에 긍정적인 변화를 가져오기를 바랍니다. 
+                         또한, 이 캐릭터들은 교육 자료, 캠페인, 상품 등 다양한 방식으로 활용되어, 
+                         메시지의 전달력을 극대화하고, 동물 보호 운동에 대한 공감대와 지지를 넓혀가는 데 기여하게 됩니다.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <img src="/images/all.svg" style="width: 70%" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui grid">
+        <div class="sixteen wide column section" style="background-color: #efad22; ">
+            <div class="content" style="text-align: center;">
+                <h1>안아주고싶은 이야기</h1>
+            </div>
+            <div class="content">
+                <ul style="text-align: left;">
+                    <li style="border-bottom:1px solid #F09503; padding-bottom:10px; margin-bottom: 10px;"> 
+                        <a href="#" class="hover-underline-animation">프롤로그</a>
+                    </li>
+                    <li style="border-bottom:1px solid #F09503; padding-bottom:10px; margin-bottom: 10px;">
+                        <a href="#" class="hover-underline-animation">1화 : 찌즈의 여정</a>
+                    </li>
+                    <li style="border-bottom:1px solid #F09503; padding-bottom:10px; margin-bottom: 10px;">
+                        <a href="#" class="hover-underline-animation">2화 : 수단의 여정</a>
+                    </li>
+                    <li style="border-bottom:1px solid #F09503; padding-bottom:10px; margin-bottom: 10px;">
+                        <a href="#" class="hover-underline-animation">3화 : 새로운 동료</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <div class="sixteen wide column section" style="background-color: #ffffff; border-bottom: 1px solid #9b7f02">
+            <div class="content">
+                <div class="ui centered grid card-container ">
+                    <div class="column card" style="margin-left:20px; background-color: #C8C8CA; width: 300px; height: 300px; border-radius: 30px;">
+                        <canvas id="canvas1" style="height:100%; width:100%; border-radius: 30px; background-color: #C8C8CA;"></canvas>
+                    </div>
+                    <div class="column card" style="margin-left:20px; background-color: #C8C8CA; width: 300px; height: 300px; border-radius: 30px;">
+                        <canvas id="canvas2" style="height:100%; width:100%; border-radius: 30px; background-color: #C8C8CA;"></canvas>
+                    </div>
+                    <div class="column card" style="margin-left:20px; background-color: #C8C8CA; width: 300px; height: 300px; border-radius: 30px;">
+                        <canvas id="canvas3" style="height:100%; width:100%; border-radius: 30px; background-color: #C8C8CA;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui grid">
+        <div class="sixteen wide column section" style="background-color: #efad22;">
+            <div class="content">
+                <button class="ui instagram button" onclick="location.href='https://www.instagram.com/p/C3UL_haPFmZ/?igsh=MXA1aTU0MWJtZmd1cA=='" >
+                    <i class="instagram icon"></i>
+                    Instagram
+                  </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.0/countUp.js"></script> -->
+<script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+<!-- <script src="https://threejs.org/build/three.js"></script>
+<script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script> -->
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+            "GLTFLoader": "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+        }
+    }
+</script>
+<script type="module">
+    import { GLTFLoader } from 'GLTFLoader';
+    import * as THREE from 'three';
+    
+
+    
+
+    let camera = new THREE.PerspectiveCamera(30, 1);
+    camera.position.set(0, 0, 8);
+    
+    let canvas_list = ['canvas1', 'canvas2', 'canvas3']
+    let model_file_list = ['models/duck_2.gltf', 'models/ele.gltf', 'models/mos.gltf']
+
+    canvas_list.forEach((canvas, idx) => {
+        let scene = new THREE.Scene();
+        scene.background = new THREE.Color('#ECE6CC');
+        let light = new THREE.DirectionalLight(0x404040, 10);
+        scene.add(light);
+
+        let renderer = new THREE.WebGLRenderer({
+            canvas: document.querySelector(`#${canvas}`),
+            antialias: true
+        });
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        
+        let loader = new GLTFLoader();
+        loader.load(`${model_file_list[idx]}`, function(gltf) {
+            scene.traverse(function(object) {
+            if (object.isMesh) { // 메쉬 타입의 오브젝트를 찾음
+                console.log(object.name); // 오브젝트 이름 출력
+                console.log(object.position); // 오브젝트 이름 출력
+                    // 필요한 경우 여기에서 특정 오브젝트를 식별
+                }
+            });
+
+            scene.add(gltf.scene);
+
+            function animate() {
+                requestAnimationFrame(animate);
+                gltf.scene.rotation.y -= 0.01;
+                // gltf.scene.rotation.x -= 0.01; 
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        });
+    })
+    
+
+</script>
+
+<script>
+    let options = {
+        duration: 2.5,
+        easingFn: function(t, b, c, d) {
+            return c * (-Math.pow(2, -10 * t / d) + 1) + b;
+        }
+    }
+    
+    let count_list = ['count1', 'count2', 'count3']
+    let cnt_list = [12, 1282, 5736]
+
+    count_list.forEach((id, idx) => {
+        let count = new countUp.CountUp(id, cnt_list[idx], options);
+        if (!count.error) {
+            count.start();
+        } else {
+            console.error(count.error);
+        }
+    })
+</script>
+
+<script>
+    let observer = new IntersectionObserver((e)=>{
+        e.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('status-up');
+            } else {
+                entry.target.classList.remove('status-up');
+            }
+        })
+    }, { threshold: 0.2 })
+
+    document.querySelectorAll('.section > div').forEach((section) => {
+        observer.observe(section);
+    })
+</script>
+</body>
 </html>
